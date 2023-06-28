@@ -1,36 +1,53 @@
-import Image from "next/image";
-import logoLight from "../public/images/logoLight.png";
-import {
-  BsFacebook,
-  BsTwitter,
-  BsYoutube,
-  BsLinkedin,
-  BsGithub,
-} from "react-icons/bs";
-import { AiOutlineCopyrightCircle } from "react-icons/ai";
+'use client';
+import { Footer } from 'flowbite-react';
+import { BsDribble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 
-const Footer = () => {
+const FooterLayout = () => {
   return (
-    <div className="w-full py-10 bg-bgColor text-white/80 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 justify-center items-center md:justify-between">
-        <div className="flex items-center gap-3">
-          <Image src={logoLight} width={80} height={80} alt="logo" />
-          <p className="flex items-center text-sm font-titleFont gap-1">
-            <AiOutlineCopyrightCircle className="mt-[1px]" />
-            reactBD || all rights reserved
-          </p>
+    <Footer container className='footerBag'>
+      <div className="w-full text-center">
+        <div className="footerdesign">
+          <Footer.LinkGroup className='Footermenu'>
+            <Footer.Link href="#">
+              GP Services
+            </Footer.Link>
+            <Footer.Link href="#">
+              Dental Services
+            </Footer.Link>
+            <Footer.Link href="#">
+              About Us
+            </Footer.Link>
+            <Footer.Link href="#">
+              Contact Us
+            </Footer.Link>
+          </Footer.LinkGroup>
         </div>
-
-        <div className="flex gap-6">
-          <BsYoutube className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
-          <BsFacebook className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
-          <BsGithub className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
-          <BsLinkedin className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
-          <BsTwitter className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
+        <Footer.Divider className='divider'/>
+        <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+          <Footer.Icon
+            href="#"
+            icon={BsFacebook}
+            className='Footermenu' />
+          <Footer.Icon
+            href="#"
+            icon={BsInstagram}
+            className='Footermenu' />
+          <Footer.Icon
+            href="#"
+            icon={BsTwitter}
+            className='Footermenu' />
+          <Footer.LinkGroup className='Footermenu'>
+            <Footer.Link href="#">
+              Terms of Service
+            </Footer.Link>
+            <Footer.Link href="#">
+              Privacy Policy
+            </Footer.Link>
+          </Footer.LinkGroup>
         </div>
       </div>
-    </div>
+    </Footer>
   );
 };
 
-export default Footer;
+export default FooterLayout;
