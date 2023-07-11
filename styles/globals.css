@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (min-width:320px)  { 
+  /* .top-right {
+    position: absolute;
+    top: 400px !important;
+    right: 0px !important;
+  } */
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { 
+  /* .top-right {
+    position: absolute;
+    top: 64px !important;
+    right: 0px !important;
+  } */
+ }
 
 .logo {
   margin-left: 33px;
